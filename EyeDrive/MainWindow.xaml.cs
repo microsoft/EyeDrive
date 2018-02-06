@@ -153,17 +153,13 @@ namespace EyeDrive
 
             Dispatcher.BeginInvoke((Action)(() =>
             {
-                //_driveInterface = new ChairDuino.ChairDuino();
-                //_driveInterface = new StealthDrive.Stealth();
                 _driveInterface = new NullDrive();
-
-                //ChairduinoDisconnected = false;
 
                 _driveInterface.ConnectionOpened += (o, e1) =>
                 {
                     Dispatcher.BeginInvoke((Action)(() =>
                     {
-                        ChairduinoDisconnected = false;
+                        IDriveDisconnected = false;
                     }));
                 };
 
@@ -171,7 +167,7 @@ namespace EyeDrive
                 {
                     Dispatcher.BeginInvoke((Action)(() =>
                     {
-                        ChairduinoDisconnected = true;
+                        IDriveDisconnected = true;
                     }));
                 };
 
@@ -179,7 +175,7 @@ namespace EyeDrive
                 {
                     Dispatcher.BeginInvoke((Action)(() =>
                     {
-                        ChairduinoDisconnected = true;
+                        IDriveDisconnected = true;
                         //MessageBox.Show(ce.Message);
                     }));
                 };
@@ -249,11 +245,11 @@ namespace EyeDrive
 
         private bool GazeToolbarVisible;
 
-        private bool ChairduinoDisconnected = true;
+        private bool IDriveDisconnected = true;
 
         public bool MainWindowActive { get; set; }
 
-        public bool DrivingEnabled => !ChairduinoDisconnected && !GazeToolbarVisible && MainWindowActive;
+        public bool DrivingEnabled => !IDriveDisconnected && !GazeToolbarVisible && MainWindowActive;
 
         private bool _eyesOffStopsDriving;
 
