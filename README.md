@@ -22,11 +22,11 @@ This project started life in July 2017 during Microsoft's annual [OneWeek Hackat
 	
 3.  Hey, you guys announced some cool new [Windows Eye Control](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control) features in the last Windows release, yeah?  Does this have anything to do with them?
 
-	Awesome!  Thanks for noticing!  We worked really hard on that.  But, uh, embarrassingly no.  This app is based on older 'Windows Desktop' technology because that's what you have to use if you write an Eye Control app today.  But hey, Windows is getting better all the time and we just worked to create a [new USB Standard for eye tracking cameras](http://www.usb.org/developers/hidpage/HUTRR74_-_Usage_Page_for_Head_and_Eye_Trackers.pdf), so it's a pretty good bet that more good things are coming!  I'd suggest attending [Microsoft Build 2018](https://www.microsoft.com/en-us/build) if you're into this stuff and you want to be part of an exciting future...
+	Awesome!  Thanks for noticing!  We worked really hard on that.  Not yet.  This app is based on older 'Windows Desktop' technology because that's what you have to use if you write an eye control app today.  But we're working on that, Windows is getting better all the time, and we just worked to create a [new USB Standard for eye tracking cameras](http://www.usb.org/developers/hidpage/HUTRR74_-_Usage_Page_for_Head_and_Eye_Trackers.pdf), so it's a pretty good bet that more good things are coming!  Keep an eye out for events like [Microsoft Build 2018](https://www.microsoft.com/en-us/build) to learn more if you're into this stuff and you want to be part of an exciting future...
 
 4.  What are your future plans for this project?
 
-	We'll keep working on this to improve it, but it's a pretty straightforward app so there's not a lot we want to add right now.  Simple is good.  Obviously we'll keep it up to date as Windows Eye Control changes and gets better over time.
+	We'll keep working on this to improve it, but it's a pretty straightforward app so there's not a lot we want to add right now.  Simple is good.  We'll keep it up to date as Windows Eye Control changes and gets better over time.
 	
 	Mostly we want to see what interesting things you'll do with this.  We created an easy to implement interface, IDrive, that you can implement with whatever you think needs to be driven around.  Let's turn this question around, what are *your* plans for this project?
 	
