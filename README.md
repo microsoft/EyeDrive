@@ -18,13 +18,11 @@ Eye Drive started in 2017 as a collaboration between [Team Gleason](http://www.t
 
 	Well, the point here is twofold.  First, most people haven't ever seen an eye control sensor and don't know what it can do.  Let's introduce that to them with a simple app that has lots of possibilities.
 
-	Second, sure, any joystick alone isn't particularly useful.  But people attach joysticks to things in useful ways all the time.  Xbox consoles.  Fighter jets.  Robot arms.  So here you go, here's a new type of joystick that doesn't require hands.  Go attach it to a rocket ship or something.
-
-	Anyone is free to experiment with Eye Drive to build whatever useful things they might imagine; what will you build?
+	Second, sure, any joystick alone isn't particularly useful.  But people attach joysticks to things in useful ways all the time.  Xbox consoles.  Fighter jets.  Robot arms.  So here you go, here's a new type of joystick that doesn't require hands.  Anyone is free to experiment with Eye Drive to build whatever useful things they might imagine; what will you build?
 
 3.  Hey, you guys announced some cool new [Windows Eye Control](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control) features in the last Windows release, yeah?  Does this have anything to do with them?
 
-	Awesome!  Thanks for noticing!  We worked hard on that.  Not yet.  This app is based on older 'Windows Desktop' technology because that's what is available to use if you write an eye control app today.  However, we're working on updates, Windows is getting better all the time, and we just worked to create a [new USB Standard for eye tracking cameras](http://www.usb.org/developers/hidpage/HUTRR74_-_Usage_Page_for_Head_and_Eye_Trackers.pdf), so it's a pretty safe bet that more good things are coming!  Keep an eye out for events like [Microsoft Build 2018](https://www.microsoft.com/en-us/build) to learn more if you're into this stuff and you want to be part of an exciting future...
+	Awesome!  Thanks for noticing!  We worked hard on that.  Not yet.  This app is based on older 'Windows Desktop' technology because that's what is available to use if you write an eye control app today.  However, we're working on updates, Windows just keeps getting better, and we just worked to create a [new USB Standard for eye tracking cameras](http://www.usb.org/developers/hidpage/HUTRR74_-_Usage_Page_for_Head_and_Eye_Trackers.pdf), so it's a pretty safe bet that more good things are coming!  Keep an eye out for events like [Microsoft Build 2018](https://www.microsoft.com/en-us/build) to learn more if you're into this stuff and you want to be part of an exciting future...
 
 4.  What are your future plans for this project?
 
