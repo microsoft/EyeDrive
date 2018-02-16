@@ -28,7 +28,7 @@ This project started life in July 2017 during Microsoft's annual [OneWeek Hackat
 
 	We'll keep working on this to improve it, but it's a pretty straightforward app so there's not a lot we want to add right now.  Simple is good.  We'll keep it up to date as Windows Eye Control changes and gets better over time.
 	
-	Mostly we want to see what interesting things you'll do with this.  We created an easy to implement interface, IDrive, that you can implement with whatever you think needs to be driven around.  Let's turn this question around, what are *your* plans for this project?
+	Mostly we want to see what interesting things you'll do with this.  We created an easy to implement interface that you can implement with whatever you think needs to be driven around.  Let's turn this question around, what are *your* plans for this project?
 	
 5.  OK, I downloaded the app and compiled it, what do I need on my laptop or Surface to get it to work?
 
