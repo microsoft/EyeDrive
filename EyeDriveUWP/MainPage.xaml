@@ -5,15 +5,15 @@
     xmlns:local="using:EyeDriveUWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     xmlns:gaze="using:Microsoft.Toolkit.Uwp.Input.GazeInteraction"
     gaze:GazeInput.Interaction="Enabled"
-    >
+    gaze:GazeInput.IsCursorVisible="True"
+    mc:Ignorable="d">
 
-    <Canvas Name="Canvas">
-        <Grid Width="{Binding ActualWidth, ElementName=Canvas}" Height="{Binding ActualHeight, ElementName=Canvas}">
+    <Grid Width="{Binding ActualWidth, ElementName=Canvas}" Height="{Binding ActualHeight, ElementName=Canvas}" Canvas.ZIndex="8">
 
+        <CaptureElement Name="VideoFeed" Stretch="Uniform" />
+        <Grid Margin="0,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
@@ -94,5 +94,5 @@
             <Button x:Name="SettingsButton" Opacity="0.2" Grid.Row="6" Grid.Column="1" Content="&#xe115;" Background="Blue" Foreground="Beige" FontFamily="Segoe UI Symbol" FontSize="48" Grid.RowSpan="2"  Click="SettingsButton_Click" />
 
         </Grid>
-    </Canvas>
+    </Grid>
 </Page>

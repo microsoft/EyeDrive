@@ -1,16 +1,52 @@
 ﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Windows.Devices.Enumeration;
+using Windows.Media.Capture;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 namespace EyeDriveUWP
 {
     public sealed partial class MainPage : Page
     {
+        // FPV camera related variables
+        private MediaCapture mediaCapture;
+        private DeviceInformation deviceInformation;
+        private CaptureElement captureElement;
+
         private IDrive.IDrive driveInterface = new NullDrive();
 
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            await InitializeCameraAsync();
+            base.OnNavigatedTo(e);
+        }
+
+        private async void Application_Resuming(object sender, object o)
+        {
+            await InitializeCameraAsync();
+        }
+
+        private async Task InitializeCameraAsync()
+        {
+            if (mediaCapture == null)
+            {
+                DeviceInformationCollection cameraDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
+                deviceInformation = cameraDevices.First();
+
+                mediaCapture = new MediaCapture();
+                await mediaCapture.InitializeAsync(new MediaCaptureInitializationSettings { VideoDeviceId = deviceInformation.Id });
+                VideoFeed.Source = mediaCapture;
+                captureElement = VideoFeed;
+                await captureElement.Source.StartPreviewAsync();
+            }
         }
 
         private void ForwardLeftButton_Click(object sender, RoutedEventArgs e)
