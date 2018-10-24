@@ -99,12 +99,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IDrive.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MessageEventArgs.cs" />
-    <Compile Include="NullDrive.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,8 +135,18 @@
       <Version>6.1.9</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Toolkit.Uwp.Input.GazeInteraction">
-      <Version>4.0.0</Version>
+      <Version>4.0.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IDrive\IDrive.csproj">
+      <Project>{e2363cda-994b-4b23-9a68-d542f7ae31d9}</Project>
+      <Name>IDrive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NullDrive\NullDrive.csproj">
+      <Project>{33b96415-6fa5-4af3-a884-e0e21ab9d6ae}</Project>
+      <Name>NullDrive</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
