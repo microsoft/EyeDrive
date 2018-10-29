@@ -22,7 +22,7 @@ Eye Drive started in 2017 as a collaboration between [Team Gleason](http://www.t
 
 3.  Hey, you guys announced some cool new [Windows Eye Control](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control) features in the last Windows release, yeah?  Does this have anything to do with them?
 
-	Awesome!  Thanks for noticing!  We worked hard on that.  Not yet.  This app is based on older 'Windows Desktop' technology because that's what is available to use if you write an eye control app today.  However, we're working on updates, Windows just keeps getting better, and we just worked to create a [new USB Standard for eye tracking cameras](http://www.usb.org/developers/hidpage/HUTRR74_-_Usage_Page_for_Head_and_Eye_Trackers.pdf), so it's a pretty safe bet that more good things are coming!  Keep an eye out for events like [Microsoft Build 2018](https://www.microsoft.com/en-us/build) to learn more if you're into this stuff and you want to be part of an exciting future...
+	Awesome! Thanks for noticing! We worked hard on that. The solution contains two projects - one is based on older 'Windows Desktop' technology for historical reasons, while the other is based on UWP and uses the [Gaze Interaction Library](https://docs.microsoft.com/en-us/windows/communitytoolkit/gaze/gazeinteractionlibrary).
 
 4.  What are your future plans for this project?
 
