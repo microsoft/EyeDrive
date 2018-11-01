@@ -1,0 +1,98 @@
+﻿<Page
+    x:Class="EyeDriveUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EyeDriveUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:gaze="using:Microsoft.Toolkit.Uwp.Input.GazeInteraction"
+    gaze:GazeInput.Interaction="Enabled"
+    gaze:GazeInput.IsCursorVisible="True"
+    mc:Ignorable="d">
+
+    <Grid Width="{Binding ActualWidth, ElementName=Canvas}" Height="{Binding ActualHeight, ElementName=Canvas}" Canvas.ZIndex="8">
+
+        <CaptureElement Name="VideoFeed" Stretch="Uniform" />
+        <Grid Margin="0,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="ForwardLeftButton" Opacity="0.2" Grid.Row="1" Grid.Column="3" Content="&#xe74a;" Background="AliceBlue" FontFamily="Segoe MDL2 Assets" FontSize="64" Grid.ColumnSpan="3" Grid.RowSpan="6" Click="ForwardLeftButton_Click" Margin="20">
+                <Button.Resources>
+                    <SolidColorBrush x:Key="Enable.Button.DwellHighlight" Color="Lime"/>
+                </Button.Resources>
+                <Button.Projection>
+                    <PlaneProjection RotationZ="45"/>
+                </Button.Projection>
+            </Button>
+            <Button x:Name="ForwardRightButton" Opacity="0.2" Grid.Row="1" Grid.Column="9" Content="&#xe74a;" Background="AliceBlue" FontFamily="Segoe MDL2 Assets" FontSize="64" Grid.ColumnSpan="3" Grid.RowSpan="6" Click="ForwardRightButton_Click" Margin="20">
+                <Button.Resources>
+                    <SolidColorBrush x:Key="Enable.Button.DwellHighlight" Color="Lime"/>
+                </Button.Resources>
+                <Button.Projection>
+                    <PlaneProjection RotationZ="-45"/>
+                </Button.Projection>
+            </Button>
+
+            <Button x:Name="ForwardButton" Opacity="0.2" Grid.Row="0" Grid.Column="6" Content="&#xe74a;" Background="AliceBlue" FontFamily="Segoe MDL2 Assets" FontSize="64" Grid.ColumnSpan="3" Grid.RowSpan="6" Click="ForwardButton_Click" Margin="50,100">
+                <Button.Resources>
+                    <SolidColorBrush x:Key="Enable.Button.DwellHighlight" Color="Lime"/>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="LeftButton" Opacity="0.2" Grid.Row="8" Grid.Column="3" Content="&#xe72b;" Background="AliceBlue" FontFamily="Segoe MDL2 Assets" FontSize="64" Grid.ColumnSpan="3" Grid.RowSpan="6" Click="LeftButton_Click" Margin="50,100">
+                <Button.Resources>
+                    <SolidColorBrush x:Key="Enable.Button.DwellHighlight" Color="Lime"/>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="RightButton" Opacity="0.2" Grid.Row="8" Grid.Column="9" Content="&#xe72a;" Background="AliceBlue" FontFamily="Segoe MDL2 Assets" FontSize="64" Grid.ColumnSpan="3" Grid.RowSpan="6" Click="RightButton_Click" Margin="50,100">
+                <Button.Resources>
+                    <SolidColorBrush x:Key="Enable.Button.DwellHighlight" Color="Lime"/>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="ReverseButton" Opacity="0.2" Grid.Row="10" Grid.Column="6" Content="&#xe74b;" Background="AliceBlue" FontFamily="Segoe MDL2 Assets" FontSize="64" Grid.ColumnSpan="3" Grid.RowSpan="4" Click="ReverseButton_Click" Margin="50,50">
+                <Button.Resources>
+                    <SolidColorBrush x:Key="Enable.Button.DwellHighlight" Color="Lime"/>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="StopButton" Opacity="0.2" Grid.Row="5" Grid.Column="6" Content="&#xe71a;" FontFamily="Segoe MDL2 Assets" FontSize="64" Grid.ColumnSpan="3" Grid.RowSpan="6" Click="StopButton_Click" Margin="50,100">
+                <Button.Resources>
+                    <SolidColorBrush x:Key="Enable.Button.DwellHighlight" Color="Red"/>
+                </Button.Resources>
+            </Button>
+
+            <Button x:Name="EyeGazeOnButton" Opacity="0.2" Grid.Row="2" Grid.Column="1" Content="&#x1f441;" Background="Blue" Foreground="Beige" FontFamily="Segoe UI Symbol" FontSize="48" Grid.RowSpan="2"  Click="EyeGazeOnButton_Click"/>
+
+            <Button x:Name="SettingsButton" Opacity="0.2" Grid.Row="6" Grid.Column="1" Content="&#xe115;" Background="Blue" Foreground="Beige" FontFamily="Segoe UI Symbol" FontSize="48" Grid.RowSpan="2"  Click="SettingsButton_Click" />
+
+        </Grid>
+    </Grid>
+</Page>
